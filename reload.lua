@@ -294,8 +294,10 @@ function reload(path, time_pos)
   msg.debug("reload", path, time_pos)
   if time_pos == nil then
     mp.commandv("loadfile", path, "replace")
+  --[[
   else
     mp.commandv("loadfile", path, "replace", "start=+" .. time_pos)
+  --]]
   end
 end
 
